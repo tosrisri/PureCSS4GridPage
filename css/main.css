@@ -1,0 +1,480 @@
+/* main.css - Main styles for REV Consulting page */
+/* Author: Srinib */
+/* Date: 2019-11-06 */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap');
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+/* Variables */
+:root {
+  --textwhite: #fff;
+  --textblack: #000;
+  --textgrey: #666;
+  --pinkaccent: #fb3c44;
+  --blueaccent: #4141dc;
+}
+
+/* Resets */
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+}
+* {
+   box-sizing: border-box;
+}
+
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+/* Defaults */
+h1, h2, h3, h4, h5 { font-weight: bold; color: #4d4c53; }
+
+
+/* Helpers */
+.pl-2 {
+  padding-left: 2em;
+}
+.nmt-12 {
+  margin-top: -12em;
+}
+
+/* Layout Styles */
+.wrapper {
+  border: 0px solid #000;
+}
+.lbox {
+  padding: 0 5em;
+}
+
+
+/* Header Styles */
+.header-cont {
+  border-top: 3px solid var(--pinkaccent);
+  width: 100%;
+     height: 80vh;
+        background-image: url("../images/banner_home.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+    flex-direction: column;
+}
+
+.header {
+     display: flex;
+  justify-content: space-between;
+  padding-top: 1em;
+}
+.hitems {
+color: #fff;
+}
+.menu-cont a {
+  margin-left: 1em;
+}
+
+.jumbotron {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  height: 100%;
+  align-items: flex-start;
+}
+.jumbotron h2, .jumbotron p {
+  color: var(--textwhite);
+}
+.jumbotron h2 {
+    font-size: 4em;
+}
+.jumbotron p {font-weight: 200;
+  margin: 1.5em 0;
+}
+.btn {
+  background-color: #4141dc;
+color: white;
+text-decoration: none;
+font-weight: 100;
+padding: 1em 2em;
+border-radius: 2em;
+display: inline-block;
+}
+span.arrow img {
+  vertical-align: bottom;
+}
+
+
+
+/* Section Styles */
+section {
+  border-bottom: 0px dotted #ccc;
+  padding: 5em 0;
+  margin: 12em 0;
+}
+
+/* Grid Defenitions */
+.gparent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: minmax(1em, max-content);
+  grid-gap: 1em;
+}
+
+.gchild:nth-child(1) {
+  grid-column: 2/4;
+}
+.gchild:nth-child(2) {
+  grid-column: 2/3;
+}
+.gchild:nth-child(3) {
+  grid-column: 3/4;
+  /* justify-self: center;  Horizontal Align */
+    align-self: center;  /* vertical Align */
+}
+.gchild {
+  padding: 0 2em;
+  border: 0px solid red;
+}
+
+h2.section-title {
+  font-size: 2.5em;
+  color: var(--textgrey);
+}
+h2.section-title::after {
+  display: block;
+  content: " ";
+  border: 2px solid var(--pinkaccent);
+  width: 3rem;
+  text-align: left;
+  margin: 1rem 0 1em;
+}
+p.section-rtext {
+  font-size: 0.9em;
+  color: var(--textgrey);
+  font-weight: 200;
+  line-height: 1.7em;
+}
+a.cus {
+  text-decoration: none;
+font-weight: 200;
+font-size: 0.9em;
+}
+a.cus::before {
+  display: block;
+  content: " ";
+  width: 3em;
+  height: 3em;
+  text-align: center;
+  background: var(--blueaccent) url(../images/contact_btn.svg) 50% 50% no-repeat;
+  border-radius: 50%;
+  background-size: 3em;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+a.cus::after {
+  display: inline;
+  content: url(../images/arrow_btn.svg);
+  padding: 0 0 0 0.5em;
+  vertical-align: middle;
+}
+
+/* WWAP */
+.wwap {
+  background: transparent url(../images/question_img.jpg) left -45% no-repeat;
+  background-size: contain;
+  border: 0px solid red;
+}
+
+.tmob-img {
+  background: transparent url(../images/t-mob-landing.png) 50% 50% no-repeat;
+  background-size: contain;
+  border: 1px solid black;
+  margin: 1em;
+  min-height: 10em;
+}
+.timg img {
+max-width: 100%;
+border:0px solid green;
+box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+.btn-vcs {
+  border: 1px solid var(--blueaccent);
+font-size: 0.9em;
+text-decoration: none;
+font-weight: 100;
+border-radius: 20px;
+padding: 5px 10px;
+margin-top: 1em;
+display: inline-block;
+}
+
+/* audi-cont */
+.audi-cont {
+  background: transparent url(../images/audi.jpg) right -45% no-repeat;
+  background-size: contain;
+  grid-gap: 1em;
+}
+.gparent1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: minmax(1em, max-content);
+}
+.gchild1:nth-child(1) {
+  grid-column: 1/4;
+}
+.gchild1:nth-child(2) {
+  grid-column: 1/2;
+}
+.gchild1:nth-child(3) {
+  grid-column: 2/3;
+}
+.gchild1 {
+  padding: 0em 2em;
+  border: 0px solid red;
+}
+
+h3.ctitle {
+  font-weight: 600;
+    font-size: 1.2em;
+}
+.clogo {
+  float: right;
+  display: inline-block;
+  border: 0px solid magenta;
+}
+span.clogo img {
+    max-width: 75%;
+}
+.ctype {
+  font-size: 0.8em;
+  text-transform: capitalize;
+  margin-bottom: 1.5em;
+}
+
+.alaska {
+  background: transparent url(../images/alaska.jpg) left -45% no-repeat;
+  background-size: contain;
+  border: 0px solid red;
+}
+
+
+
+/* What people are saying */
+.wpas {
+  background: transparent url(../images/testimonials.jpg) left 22% no-repeat;
+  background-size: 50%;
+  border: 0px solid red;
+}
+
+.panel-cont {
+  border: 0px solid black;
+  /* margin: 0 1em; */
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+}
+
+.panel-header {
+  border-bottom: 2px solid #d0d0d0;
+  min-height: 5em;
+  background-color: #e8e8e8;
+  border-radius: 5px 5px 0 0;
+}
+.avatar {
+  text-align: center;
+}
+.avatar img.clip-circle {
+  width: 100px;
+  clip-path: circle(50px at center);
+  margin: 0 auto;
+  margin-top: -5em;
+}
+h4.person-details {
+  text-align: center;
+}
+h4.person-details span {
+  font-size: 0.8em;
+  font-weight: 100;
+  font-style: italic;
+  display: block;
+}
+p.person-overview {
+  padding: 2em;
+  font-weight: 100;
+  line-height: 1.6em;
+  font-size: 0.9em;
+}
+.kmore {
+  display: block;
+  margin: 1em 0;
+  text-decoration: none;
+  color: var(--blueaccent);
+  font-size: 0.8em;
+}
+.kmore img {
+    vertical-align: middle;
+    width: 20px;
+}
+.btn-cont {
+  grid-column: 2/4;
+  margin-top: 12em;
+  background: transparent url(../images/hline.png) right center no-repeat;
+  background-size: contain;
+}
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+#wwa {
+  margin-top: 2em;
+}
+
+#footerCont {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+  background-color: #f3f3f3;
+  font-size: 0.8em;
+  font-weight: 100;
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+#footerCont .footer-item {
+  padding:2em;
+  align-self:center;
+ justify-self: center;
+}
+ul.social-icons {
+    margin-top: 10px;
+}
+.social-icons li {
+    vertical-align: top;
+    display: inline;
+    height: 100px;
+}
+.social-icons a {
+    color: #333;
+    text-decoration: none;
+}
+.fa {
+    padding:10px 14px;
+    transition: .5s;
+    /* color: #322f30; */
+}
+.fa:hover {
+    color: var(--pinkaccent);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* mobile  */
+@media (max-width: 767px) {
+  .lbox {
+    padding: 0 1em;
+}
+
+  .gparent, .gparent1 {
+    grid-template-columns: 1fr;
+  }
+  .gchild:nth-child(1),   .gchild:nth-child(2),   .gchild:nth-child(3), .gchild1:nth-child(1),   .gchild1:nth-child(2),   .gchild1:nth-child(3) {
+    border: 0px solid cyan;
+    grid-column: span 3;
+  }
+  .gchild {
+    padding: 0 1em;
+  }
+  .gchild:nth-child(3) {
+      justify-self: center;
+      padding-top: 3em;
+  }
+  section {
+    margin: 6em 0;
+}
+  h2.section-title {
+      font-size: 2em;
+  }
+  .wwap {
+    background: transparent url(../images/question_img.jpg) top center no-repeat;
+background-size: contain;
+  }
+  .timg img {
+      max-width: 80%;
+    }
+    section.wwap .gchild:nth-child(2) {
+        text-align: center;
+    }
+
+    .audi-cont {
+    background: transparent url(../images/audi.jpg) top center no-repeat;
+    background-size: contain;
+  }
+
+  .audi-cont .gchild1:nth-child(2) {
+      order: 1;
+      padding-top: 3em;
+  }
+  .audi-cont .gchild1:nth-child(3) {
+    text-align: center;
+}
+
+.alaska {
+    background: transparent url(../images/alaska.jpg) top center no-repeat;
+    background-size: contain;
+}
+.timg {
+  text-align: center;
+}
+
+
+.wpas {
+    background: transparent url(../images/testimonials.jpg) top center no-repeat;
+    background-size: 100%;
+}
+
+.btn-cont {
+    grid-column: 1/4;
+    margin-top: 4em;
+    background: transparent url(../images/hline.png) right center no-repeat;
+    background-size: contain;
+    margin-left: 20%;
+}
+
+#footerCont {
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+    padding: 2em 0;
+}
+  #footerCont .footer-item {
+    padding: 1em 0 0 0;
+  }
+  .footer-item:nth-child(2) {
+      order: 1;
+  }
+  .footer-item:nth-child(1) {
+    order:3;
+}
+.footer-item:nth-child(3) {
+    order: 2;
+}
+
+
+
+
+
+
+
+
+
+}
